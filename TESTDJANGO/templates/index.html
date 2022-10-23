@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 style="text-align: center">Music Store Home</h1>
+
+    <div id="product_gallery">
+        <h2>New Arrivals</h2>
+
+        <!-- Placeholder Image -->
+        <img src="/static/images/product_gallery_placeholder.PNG" style="width: 75%; display: block; margin: 25px auto;">
+    
+    </div>
+
+    <button class="purpleButton">
+        <a href="{% url 'all-products' %}">Start Shopping</a>
+    </button>
+{% endblock content %}

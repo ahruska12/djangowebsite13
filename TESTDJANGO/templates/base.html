@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        {% block title %}<title>Music Memoir</title>{% endblock %}
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+    </head>
+            <canvas id="topBar" width="3000" height="35" style="background-color: darkslategray">
+            </canvas>
+    <body>
+        <div id="siteTitle">
+
+            <a href="{% url 'index'  %}">
+                <img src="{% static 'images/logoFIXED.PNG' %}" alt="Music Memoir Logo">
+            </a>
+        </div>
+
+        <div id="navHamburger" onclick="openNavMenu()">&#9776; Menu</div>
+
+        <div id="navMenu">
+            {% block menu %}
+                <a href="javascript:void(0)" id="closeButton" onclick="closeNavMenu()">&times;</a>
+                <a href="{% url 'index' %}">Home</a>
+
+				<hr>
+
+				<a href="{% url 'all-products' %}">Shop</a>
+				<a href="{% url 'all-music' %}" class="tab">All Music</a>
+                <a href="{% url 'all-merch' %}" class="tab">All Merch</a>
+                <a href="{% url 'sales-items' %}" class="tab">Sale Items</a>
+                <a href="{% url 'contact-us' %}" class="tab">Contact Us</a>
+                <a href="{% url 'wish-list' %}" class="tab">Wish List</a>
+                <a href="{% url 'user-profile-settings' %}" class="tab">User Profile</a>
+
+				<hr>
+
+
+            {% endblock %}
+
+        </div>
+
+        <div id="pageContent">
+            {% block content %}{% endblock %}
+
+            {% block pagination %}
+                {% if is_paginated %}
+                    <div class="pagination">
+                        <span class="page-links">
+                            {% if page_obj.has_previous %}
+                                <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}">previous</a>
+                            {% endif %}
+
+                            <span class="page-current">
+                                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                            </span>
+
+                            {% if page_obj.has_next %}
+                                <a href="{{ request.path }}?page={{ page_obj.next_page_number }}">next</a>
+                            {% endif %}
+
+                        </span>
+
+                    </div>
+
+                {% endif %}
+
+            {% endblock %}
+
+        </div>
+
+        <script>
+            function openNavMenu() {
+                document.getElementById("navMenu").style.width = "300px";
+            }
+
+            function closeNavMenu() {
+                document.getElementById("navMenu").style.width = "0";
+            }
+
+        </script>
+
+    </body>
+
+</html>

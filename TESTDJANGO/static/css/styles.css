@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+/****************************************************************************************************
+* HTML Elements                                                                                     *
+****************************************************************************************************/
+
+/* Establishes how the body will be displayed */
+body {
+    height: 100%;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, sans-serif;
+    background-color: #2b2b33;
+}
+
+/* Establishes how the body's horizontal rule elements will be displayed */
+body hr {
+    height: 1px;
+    width: 98%;
+    color: #7f6ae6;
+    background-color: #7f6ae6;
+    border-width: 0;
+}
+
+/* Establishes how h1 headings will be displayed */
+h1 {
+    color: #7f6ae6;
+}
+
+/* Establishes how h2 headings will be displayed */
+h2 {
+    color: #7f6ae6;
+}
+
+/* Establishes how h3 headings will be displayed */
+h3 {
+    color: #7f6ae6;
+}
+
+/* Establishes how h4 headings will be displayed */
+h4 {
+    color: #7f6ae6;
+}
+
+/* Establishes how h5 headings will be displayed */
+h5 {
+    color: #7f6ae6;
+}
+
+/* Establishes how paragraph text will be displayed */
+p {
+    color: #d5ccff;
+}
+
+/* Establishes how footer elements will be displayed */
+footer {
+    text-align: right;
+    padding: 5px 25px 10px 25px;
+}
+
+/* Establishes how footer link elements will be displayed */
+footer a {
+    color: #d5ccff;
+}
+
+
+/****************************************************************************************************
+* Classes                                                                                     *
+****************************************************************************************************/
+
+/* Creates a class for indenting content by 1 tab (50px because I like that number) */
+.tab {
+    margin-left: 50px;
+}
+
+/* Creates a class for indenting content by 2 tabs */
+.tab2 {
+    margin-left: 100px;
+}
+
+/* Creates a class for making centered sections(like a row) */
+.centeredSection {
+    display: block;
+    text-align: center;
+    margin: 0px auto 10px auto;
+}
+
+/* Creates a class for establishing how divs within a centered section are displayed (mostly for the footer) */
+.centeredSection div {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 100px 5px 100px;
+}
+
+.purpleButton {
+    font-size: 18px;
+    text-decoration: none;
+    background-color: #7f6ae6;
+    display: block;
+    margin: 15px auto 50px auto;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.purpleButton a {
+    color: #111111;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.purpleButton a:visited {
+    color: #111111;
+}
+
+
+/****************************************************************************************************
+* ID Specific Elements                                                                              *
+****************************************************************************************************/
+
+#siteTitle {
+    color: #7f6ae6;
+    margin-left: 25px;
+}
+
+#navHamburger {
+    color: #7f6ae6;
+    margin-left: 25px;
+    font-size: 30px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#navMenu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+#navMenu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 25px;
+    color: #7f6ae6;
+    display: block;
+    transition: 0.3s;
+}
+
+#navMenu a:hover {
+    color: #f1f1f1;
+}
+
+#navMenu #closeButton {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#pageContent{
+    margin: 25px;
+}
+
+#product_gallery {
+    width: 75%;
+    min-width: 500px;
+    margin: auto;
+    padding: 25px 35px 50px 35px;
+    background-color: #111111;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Styles User Settings and Profile Page */
+#user_settings {
+    width: 75%;
+    margin: auto;
+    font-size: 25px;
+    color: white;
+    display: inline-block;
+}
