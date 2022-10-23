@@ -43,6 +43,7 @@ def contact_us(request):
 
 def cart_add(request, prod_id):
     item = Product.objects.get(pk=prod_id)
+    
     return render('shopping_cart.html')
 
 

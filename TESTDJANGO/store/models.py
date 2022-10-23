@@ -110,5 +110,3 @@ class Payment(models.Model):
     exp = models.DateField(null=True, blank=True)
     securitycode = models.IntegerField()  # removed max length to make an error code happy
     member_username = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-
-

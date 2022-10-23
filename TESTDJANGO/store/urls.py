@@ -11,5 +11,4 @@ urlpatterns = [
     path('sale-items/', views.sale_items, name='sales-items'),
     path('user-profile-settings/', views.user_profile_settings, name='user-profile-settings'),
     path('wish-list/', views.wish_list, name='wish-list'),
-    path('cart/', views.cart_add, name='shopping-cart')
 ]
